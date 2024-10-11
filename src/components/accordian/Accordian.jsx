@@ -1,6 +1,6 @@
 import { useState } from "react";
 import data from "./data";
-import "./styles.css";
+import "./accordian.css";
 
 const Accordian = () => {
   const [selected, setSelected] = useState([]);
