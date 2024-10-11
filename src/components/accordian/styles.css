@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.multi-select-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #3182ce;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.multi-select-btn:hover {
+  background-color: #2b6cb0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.accordion {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.item {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.title {
+  background: #f7fafc;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.title h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.title span {
+  font-size: 24px;
+  color: #3182ce;
+  transition: transform 0.3s ease;
+}
+
+.title.active {
+  background: #edf2f7;
+}
+
+.title.active span {
+  transform: rotate(180deg);
+}
+
+.title:hover {
+  background: #edf2f7;
+}
+
+.content {
+  background: #fff;
+  padding: 20px;
+  font-size: 16px;
+  color: #4a5568;
+  line-height: 1.6;
+  overflow: hidden;
+  animation: expand 0.3s ease forwards;
+}
+
+@keyframes expand {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
+
+.accordion .content p {
+  margin: 0;
+}
